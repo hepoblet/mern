@@ -19,6 +19,7 @@ function App() {
       <div className="container">
         <Navbar/>
         <br/>
+<<<<<<< HEAD
         <Route path="/" exact component={Home}/>
         <Route path="/exercises" exact component={ExercisesList}/>
         <Route path="/exercises/create" exact component={CreateExercise}/>
@@ -26,6 +27,12 @@ function App() {
         <Route path="/users" exact component={UsersList}/>
         <Route path="/users/create" exact component={CreateUser}/>
         <Route path="/users/edit/:id" exact component={EditUser}/>
+=======
+        <Route path="/" exact component={ExercisesList}/>
+        <Route path="/edit/:id" exact component={EditExercise}/>
+        <Route path="/create" exact component={CreateExercise}/>
+        <Route path="/user" exact component={CreateUser}/>
+>>>>>>> 091659fe6733282aa41deb96d395d20b8dc2fb3a
       </div>
     </Router>
   );

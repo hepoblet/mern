@@ -1,9 +1,8 @@
-import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Navbar from './components/navbar.component';
+import Navbar from './components/navbar';
 
 import Home from './pages/home';
 import ExercisesList from './pages/exercises';
@@ -13,13 +12,12 @@ import UsersList from './pages/users';
 import CreateUser from './pages/users/create';
 import EditUser from './pages/users/edit';
 
-function App() {
+const App = () => {
   return (
     <Router>
       <div className="container">
         <Navbar/>
         <br/>
-<<<<<<< HEAD
         <Route path="/" exact component={Home}/>
         <Route path="/exercises" exact component={ExercisesList}/>
         <Route path="/exercises/create" exact component={CreateExercise}/>
@@ -27,12 +25,6 @@ function App() {
         <Route path="/users" exact component={UsersList}/>
         <Route path="/users/create" exact component={CreateUser}/>
         <Route path="/users/edit/:id" exact component={EditUser}/>
-=======
-        <Route path="/" exact component={ExercisesList}/>
-        <Route path="/edit/:id" exact component={EditExercise}/>
-        <Route path="/create" exact component={CreateExercise}/>
-        <Route path="/user" exact component={CreateUser}/>
->>>>>>> 091659fe6733282aa41deb96d395d20b8dc2fb3a
       </div>
     </Router>
   );

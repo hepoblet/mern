@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -14,7 +14,7 @@ import EditUser from './pages/users/edit';
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="container">
         <Navbar/>
         <br/>
@@ -26,7 +26,7 @@ const App = () => {
         <Route path="/users/create" exact component={CreateUser}/>
         <Route path="/users/edit/:id" exact component={EditUser}/>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 

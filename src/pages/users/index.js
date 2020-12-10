@@ -10,7 +10,7 @@ const User = (props) => {
         <tr>
             <td>{username}</td>
             <td>
-                <Link className="btn btn-primary" to={"/users/edit/" + _id}>Edit</Link><a className="btn btn-danger" href="/users/#" onClick={() => { deleteUser(_id) }}>Delete</a>
+                <Link className="btn btn-primary" to={"/users/edit/" + _id}>Edit</Link><a className="btn btn-danger" href="/users/#" onClick={(e) => { e.preventDefault(); deleteUser(_id); }}>Delete</a>
             </td>
         </tr>
     )

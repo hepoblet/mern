@@ -13,7 +13,7 @@ const Exercise = (props) => {
             <td>{duration}</td>
             <td>{date.substring(0, 10)}</td>
             <td>
-                <Link className="btn btn-primary" to={"/exercises/edit/" + _id}>Edit</Link><a className="btn btn-danger" href="/exercises/#" onClick={() => { deleteExercise(_id) }}>Delete</a>
+                <Link className="btn btn-primary" to={"/exercises/edit/" + _id}>Edit</Link><a className="btn btn-danger" href="/exercises/#" onClick={(e) => { e.preventDefault(); deleteExercise(_id); }}>Delete</a>
             </td>
         </tr>
     )
